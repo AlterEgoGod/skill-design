@@ -7,6 +7,9 @@
   --design-canvas: #f5f6f8;
   --design-surface: #ffffff;
   --design-surface-muted: #f0f2f5;
+  /* Elevation roles; light surfaces use borders/shadows to separate layers. */
+  --design-surface-raised: #ffffff;
+  --design-surface-overlay: #ffffff;
   --design-text: #18191d;
   --design-text-muted: #626773;
   --design-border: #dfe2e8;
@@ -58,6 +61,9 @@
   --design-canvas: #111215;
   --design-surface: #191b20;
   --design-surface-muted: #22252c;
+  /* Canvas < surface < raised < overlay in luminance, not page position. */
+  --design-surface-raised: #22252c;
+  --design-surface-overlay: #2b2f37;
   --design-text: #f3f4f7;
   --design-text-muted: #a5acba;
   --design-border: #343943;
