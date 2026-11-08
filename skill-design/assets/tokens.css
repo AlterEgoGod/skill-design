@@ -10,6 +10,7 @@
   /* Elevation roles; light surfaces use borders/shadows to separate layers. */
   --design-surface-raised: #ffffff;
   --design-surface-overlay: #ffffff;
+  --design-skeleton: #e2e5e9;
   --design-text: #18191d;
   --design-text-muted: #626773;
   --design-border: #dfe2e8;
@@ -64,6 +65,7 @@
   /* Canvas < surface < raised < overlay in luminance, not page position. */
   --design-surface-raised: #22252c;
   --design-surface-overlay: #2b2f37;
+  --design-skeleton: #353a43;
   --design-text: #f3f4f7;
   --design-text-muted: #a5acba;
   --design-border: #343943;
