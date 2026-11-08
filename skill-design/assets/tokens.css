@@ -12,9 +12,11 @@
   --design-surface-overlay: #ffffff;
   --design-skeleton: #e2e5e9;
   --design-text: #18191d;
-  --design-text-muted: #626773;
+  --design-text-muted: #545c69;
   --design-border: #dfe2e8;
   --design-control-border: #7c8696;
+  --design-scrollbar-thumb: #77808d;
+  --design-scrollbar-thumb-hover: #545c69;
   --design-accent: #285fe5;
   --design-accent-hover: #204fc5;
   --design-on-accent: #ffffff;
@@ -67,9 +69,11 @@
   --design-surface-overlay: #2b2f37;
   --design-skeleton: #353a43;
   --design-text: #f3f4f7;
-  --design-text-muted: #a5acba;
+  --design-text-muted: #b6bfce;
   --design-border: #343943;
   --design-control-border: #8695a9;
+  --design-scrollbar-thumb: #8692a3;
+  --design-scrollbar-thumb-hover: #b6bfce;
   --design-accent: #9bb7ff;
   --design-accent-hover: #b5c9ff;
   --design-on-accent: #111b35;
