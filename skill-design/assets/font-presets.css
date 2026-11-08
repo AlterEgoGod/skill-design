@@ -1,0 +1,12 @@
+/* Load required external font CSS separately; presets only set semantic roles. */
+:root { --design-font-heading: var(--design-font-sans); }
+[data-design-font] { --design-font-heading: var(--design-font-sans); --design-font-serif: var(--design-font-sans); --design-font-pixel: var(--design-font-sans); --design-font-mono: ui-monospace, Consolas, monospace; }
+[data-design-font="inter"] { --design-font-sans: "Inter", system-ui, sans-serif; }
+[data-design-font="roboto"] { --design-font-sans: "Roboto", system-ui, sans-serif; }
+[data-design-font="geist"] { --design-font-sans: "Geist", system-ui, sans-serif; --design-font-mono: "Geist Mono", ui-monospace, monospace; }
+[data-design-font="plex"] { --design-font-sans: "IBM Plex Sans", system-ui, sans-serif; --design-font-mono: "IBM Plex Mono", ui-monospace, monospace; --design-font-serif: "IBM Plex Serif", Georgia, serif; }
+[data-design-font="manrope"] { --design-font-sans: "Manrope", system-ui, sans-serif; }
+[data-design-font="medeo"] { --design-font-sans: "Medeo Sans", system-ui, sans-serif; --design-font-mono: "Medeo Mono", ui-monospace, monospace; --design-font-serif: "Medeo Serif", Georgia, serif; --design-font-pixel: "Medeo Pixel", sans-serif; }
+[data-design-font="segoe"] { --design-font-sans: "Segoe UI Variable", "Segoe UI", system-ui, sans-serif; }
+[data-design-heading="medeo-serif"] { --design-font-heading: "Medeo Serif", Georgia, serif; }
+[data-design-heading="medeo-pixel"] { --design-font-heading: "Medeo Pixel", sans-serif; }

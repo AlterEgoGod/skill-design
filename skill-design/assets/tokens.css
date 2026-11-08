@@ -1,0 +1,86 @@
+/* Shared starting design tokens; adapt to product requirements.
+   Load Inter Variable with Latin + Cyrillic in the consuming project.
+   Merge these names into the project's existing token system as appropriate. */
+:root {
+  --design-font-sans: "Inter", ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+  --design-font-mono: ui-monospace, Consolas, monospace;
+  --design-canvas: #f5f6f8;
+  --design-surface: #ffffff;
+  --design-surface-muted: #f0f2f5;
+  --design-text: #18191d;
+  --design-text-muted: #626773;
+  --design-border: #dfe2e8;
+  --design-control-border: #7c8696;
+  --design-accent: #285fe5;
+  --design-accent-hover: #204fc5;
+  --design-on-accent: #ffffff;
+  --design-accent-soft: #edf2ff;
+  --design-success: #18734b;
+  --design-success-soft: #eaf6ef;
+  --design-warning: #89570b;
+  --design-warning-soft: #fff5db;
+  --design-danger: #b52b3c;
+  --design-danger-soft: #fcecef;
+  --design-info: #2859ad;
+  --design-info-soft: #edf3ff;
+  --design-focus: #285fe5;
+  --design-radius-control: 8px;
+  --design-radius-card: 14px;
+  --design-radius-dialog: 20px;
+  --design-shadow-popover: 0 8px 28px rgb(24 25 29 / 10%), 0 2px 6px rgb(24 25 29 / 4%);
+  --design-space-1: 4px;
+  --design-space-2: 8px;
+  --design-space-3: 12px;
+  --design-space-4: 16px;
+  --design-space-5: 20px;
+  --design-space-6: 24px;
+  --design-space-8: 32px;
+  --design-space-10: 40px;
+  --design-space-12: 48px;
+  --design-space-16: 64px;
+  --design-text-body: 1rem;
+  --design-leading-body: 1.5;
+  --design-text-ui: .875rem;
+  --design-leading-ui: 1.428572;
+  --design-text-caption: .75rem;
+  --design-leading-caption: 1.5;
+  --design-text-section: 1.25rem;
+  --design-leading-section: 1.4;
+  --design-text-page: 1.75rem;
+  --design-leading-page: 1.25;
+  --design-control-min-height: 2.75rem;
+  --design-duration-control: 140ms;
+  --design-duration-panel: 220ms;
+  --design-ease: cubic-bezier(.2, .7, .2, 1);
+}
+
+[data-design-theme="dark"] {
+  --design-canvas: #111215;
+  --design-surface: #191b20;
+  --design-surface-muted: #22252c;
+  --design-text: #f3f4f7;
+  --design-text-muted: #a5acba;
+  --design-border: #343943;
+  --design-control-border: #8695a9;
+  --design-accent: #9bb7ff;
+  --design-accent-hover: #b5c9ff;
+  --design-on-accent: #111b35;
+  --design-accent-soft: #202f50;
+  --design-success: #87d6ad;
+  --design-success-soft: #18362a;
+  --design-warning: #f2c875;
+  --design-warning-soft: #3b2e18;
+  --design-danger: #ff9baa;
+  --design-danger-soft: #40232b;
+  --design-info: #9bbdff;
+  --design-info-soft: #202f50;
+  --design-focus: #9bb7ff;
+  --design-shadow-popover: 0 10px 32px rgb(0 0 0 / 32%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --design-duration-control: 0ms;
+    --design-duration-panel: 0ms;
+  }
+}
