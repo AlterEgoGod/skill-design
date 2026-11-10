@@ -11,6 +11,8 @@
   --design-surface-raised: #ffffff;
   --design-surface-overlay: #ffffff;
   --design-skeleton: #e2e5e9;
+  --design-skeleton-highlight: rgb(255 255 255 / 45%);
+  --design-duration-skeleton: 2.2s;
   --design-text: #18191d;
   --design-text-muted: #545c69;
   --design-border: #dfe2e8;
@@ -68,6 +70,7 @@
   --design-surface-raised: #22252c;
   --design-surface-overlay: #2b2f37;
   --design-skeleton: #353a43;
+  --design-skeleton-highlight: rgb(255 255 255 / 12%);
   --design-text: #f3f4f7;
   --design-text-muted: #b6bfce;
   --design-border: #343943;
@@ -95,4 +98,36 @@
     --design-duration-control: 0ms;
     --design-duration-panel: 0ms;
   }
+}
+
+
+/* A separate neutral gray theme; not a transparent overlay. */
+[data-design-theme="neutral"] {
+  --design-canvas: #d3d7de;
+  --design-surface: #e3e6eb;
+  --design-surface-muted: #cbd1d9;
+  --design-surface-raised: #f0f2f5;
+  --design-surface-overlay: #ffffff;
+  --design-text: #171a20;
+  --design-text-muted: #424b58;
+  --design-border: #b4bcc7;
+  --design-control-border: #606b7b;
+  --design-scrollbar-thumb: #606b7b;
+  --design-scrollbar-thumb-hover: #424b58;
+  --design-accent: #1d4ed8;
+  --design-accent-hover: #1e40af;
+  --design-on-accent: #ffffff;
+  --design-accent-soft: #eef2ff;
+  --design-focus: #1d4ed8;
+  --design-success: #166534;
+  --design-success-soft: #dcfce7;
+  --design-warning: #854d0e;
+  --design-warning-soft: #fef3c7;
+  --design-danger: #b91c1c;
+  --design-danger-soft: #fee2e2;
+  --design-info: #1e40af;
+  --design-info-soft: #dbeafe;
+  --design-skeleton: #b8c0cb;
+  --design-skeleton-highlight: rgb(255 255 255 / 35%);
+  --design-shadow-popover: 0 8px 28px rgb(24 25 29 / 14%);
 }

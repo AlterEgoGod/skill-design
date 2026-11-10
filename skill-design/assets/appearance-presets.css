@@ -1,0 +1,170 @@
+/* Load after tokens.css. Put style/theme/accent attributes on the same root.
+   These presets set roles; consuming components must use those roles. */
+[data-design-style="soft"] {
+  --design-radius-control: 14px;
+  --design-radius-card: 20px;
+  --design-radius-dialog: 24px;
+  --design-radius-menu: 18px;
+  --design-radius-item: 10px;
+}
+[data-design-style="precise"] {
+  --design-radius-control: 8px;
+  --design-radius-card: 14px;
+  --design-radius-dialog: 20px;
+  --design-radius-menu: 12px;
+  --design-radius-item: 6px;
+}
+[data-design-style="expressive"] {
+  --design-radius-control: 10px;
+  --design-radius-card: 14px;
+  --design-radius-dialog: 20px;
+  --design-radius-menu: 14px;
+  --design-radius-item: 7px;
+}
+[data-design-accent="blue"] {
+  --design-accent: #2563eb;
+  --design-accent-hover: #225bd8;
+  --design-on-accent: #ffffff;
+  --design-accent-soft: #edf2ff;
+  --design-focus: #2563eb;
+}
+[data-design-theme="dark"][data-design-accent="blue"] {
+  --design-accent: #9bb7ff;
+  --design-accent-hover: #a3bdff;
+  --design-on-accent: #111b35;
+  --design-accent-soft: #202f50;
+  --design-focus: #9bb7ff;
+}
+[data-design-theme="neutral"][data-design-accent="blue"] {
+  --design-accent: #1e51c1;
+  --design-accent-hover: #1c4bb2;
+  --design-on-accent: #ffffff;
+  --design-accent-soft: #edf2ff;
+  --design-focus: #1e51c1;
+}
+[data-design-accent="green"] {
+  --design-accent: #157f3c;
+  --design-accent-hover: #137537;
+  --design-on-accent: #ffffff;
+  --design-accent-soft: #edf8f0;
+  --design-focus: #157f3c;
+}
+[data-design-theme="dark"][data-design-accent="green"] {
+  --design-accent: #86efac;
+  --design-accent-hover: #90f0b3;
+  --design-on-accent: #111b35;
+  --design-accent-soft: #193a29;
+  --design-focus: #86efac;
+}
+[data-design-theme="neutral"][data-design-accent="green"] {
+  --design-accent: #116631;
+  --design-accent-hover: #105e2d;
+  --design-on-accent: #ffffff;
+  --design-accent-soft: #edf8f0;
+  --design-focus: #116631;
+}
+[data-design-accent="violet"] {
+  --design-accent: #7c3aed;
+  --design-accent-hover: #7235da;
+  --design-on-accent: #ffffff;
+  --design-accent-soft: #f4efff;
+  --design-focus: #7c3aed;
+}
+[data-design-theme="dark"][data-design-accent="violet"] {
+  --design-accent: #c4b5fd;
+  --design-accent-hover: #c9bbfd;
+  --design-on-accent: #111b35;
+  --design-accent-soft: #342644;
+  --design-focus: #c4b5fd;
+}
+[data-design-theme="neutral"][data-design-accent="violet"] {
+  --design-accent: #6c32ce;
+  --design-accent-hover: #632ebe;
+  --design-on-accent: #ffffff;
+  --design-accent-soft: #f4efff;
+  --design-focus: #6c32ce;
+}
+[data-design-accent="teal"] {
+  --design-accent: #0f766e;
+  --design-accent-hover: #0e6d65;
+  --design-on-accent: #ffffff;
+  --design-accent-soft: #eaf7f5;
+  --design-focus: #0f766e;
+}
+[data-design-theme="dark"][data-design-accent="teal"] {
+  --design-accent: #5eead4;
+  --design-accent-hover: #6becd7;
+  --design-on-accent: #111b35;
+  --design-accent-soft: #173936;
+  --design-focus: #5eead4;
+}
+[data-design-theme="neutral"][data-design-accent="teal"] {
+  --design-accent: #0d645e;
+  --design-accent-hover: #0c5c56;
+  --design-on-accent: #ffffff;
+  --design-accent-soft: #eaf7f5;
+  --design-focus: #0d645e;
+}
+[data-design-accent="rose"] {
+  --design-accent: #be185d;
+  --design-accent-hover: #af1656;
+  --design-on-accent: #ffffff;
+  --design-accent-soft: #fdf0f6;
+  --design-focus: #be185d;
+}
+[data-design-theme="dark"][data-design-accent="rose"] {
+  --design-accent: #f9a8d4;
+  --design-accent-hover: #f9afd7;
+  --design-on-accent: #111b35;
+  --design-accent-soft: #402538;
+  --design-focus: #f9a8d4;
+}
+[data-design-theme="neutral"][data-design-accent="rose"] {
+  --design-accent: #ad1655;
+  --design-accent-hover: #9f144e;
+  --design-on-accent: #ffffff;
+  --design-accent-soft: #fdf0f6;
+  --design-focus: #ad1655;
+}
+[data-design-accent="red"] {
+  --design-accent: #d52525;
+  --design-accent-hover: #c42222;
+  --design-on-accent: #ffffff;
+  --design-accent-soft: #fff1f2;
+  --design-focus: #d52525;
+}
+[data-design-theme="dark"][data-design-accent="red"] {
+  --design-accent: #fca5a5;
+  --design-accent-hover: #fcacac;
+  --design-on-accent: #111b35;
+  --design-accent-soft: #40252b;
+  --design-focus: #fca5a5;
+}
+[data-design-theme="neutral"][data-design-accent="red"] {
+  --design-accent: #ae1e1e;
+  --design-accent-hover: #a01c1c;
+  --design-on-accent: #ffffff;
+  --design-accent-soft: #fff1f2;
+  --design-focus: #ae1e1e;
+}
+[data-design-accent="graphite"] {
+  --design-accent: #334155;
+  --design-accent-hover: #2f3c4e;
+  --design-on-accent: #ffffff;
+  --design-accent-soft: #eef1f5;
+  --design-focus: #334155;
+}
+[data-design-theme="dark"][data-design-accent="graphite"] {
+  --design-accent: #cbd5e1;
+  --design-accent-hover: #cfd8e3;
+  --design-on-accent: #111b35;
+  --design-accent-soft: #2d333e;
+  --design-focus: #cbd5e1;
+}
+[data-design-theme="neutral"][data-design-accent="graphite"] {
+  --design-accent: #334155;
+  --design-accent-hover: #2f3c4e;
+  --design-on-accent: #ffffff;
+  --design-accent-soft: #eef1f5;
+  --design-focus: #334155;
+}

@@ -1,0 +1,30 @@
+/* Decorative placeholder: add aria-hidden="true" to each skeleton.
+   Mark the loading region aria-busy and announce status outside that region. */
+.design-skeleton {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  min-height: 1em;
+  border-radius: var(--design-radius-item, 6px);
+  background: var(--design-skeleton, #e2e5e9);
+  pointer-events: none;
+  user-select: none;
+}
+.design-skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 0%, var(--design-skeleton-highlight, rgb(255 255 255 / 45%)) 50%, transparent 100%);
+  transform: translateX(-100%);
+  animation: design-skeleton-wave var(--design-duration-skeleton, 2.2s) linear infinite;
+}
+@keyframes design-skeleton-wave {
+  0% { transform: translateX(-100%); }
+  72%, 100% { transform: translateX(100%); }
+}
+@media (prefers-reduced-motion: reduce), (forced-colors: active) {
+  .design-skeleton::after { animation: none; display: none; }
+}
+@media (forced-colors: active) {
+  .design-skeleton { background: Canvas; border: 1px solid GrayText; }
+}
