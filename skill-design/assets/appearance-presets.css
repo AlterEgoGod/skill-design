@@ -168,3 +168,125 @@
   --design-accent-soft: #eef1f5;
   --design-focus: #334155;
 }
+
+/* Optional coordinated palette. All attributes belong on the same root. */
+[data-design-palette="balanced"][data-design-accent="red"] {
+  --design-accent-swatch: #d04841;
+  --design-accent: #bb413a;
+  --design-accent-hover: #ac3c35;
+  --design-on-accent: #ffffff;
+  --design-accent-soft: #f9e9e8;
+  --design-focus: #bb413a;
+}
+[data-design-theme="dark"][data-design-palette="balanced"][data-design-accent="red"] {
+  --design-accent-swatch: #d04841;
+  --design-accent: #dd7974;
+  --design-accent-hover: #e0847f;
+  --design-on-accent: #111215;
+  --design-accent-soft: #362225;
+  --design-focus: #dd7974;
+}
+[data-design-theme="neutral"][data-design-palette="balanced"][data-design-accent="red"] {
+  --design-accent-swatch: #d04841;
+  --design-accent: #9c3631;
+  --design-accent-hover: #90322d;
+  --design-on-accent: #ffffff;
+  --design-accent-soft: #e1d3d7;
+  --design-focus: #9c3631;
+}
+[data-design-palette="balanced"][data-design-accent="violet"] {
+  --design-accent-swatch: #995fc3;
+  --design-accent: #8855ae;
+  --design-accent-hover: #7d4ea0;
+  --design-on-accent: #ffffff;
+  --design-accent-soft: #f3ecf8;
+  --design-focus: #8855ae;
+}
+[data-design-theme="dark"][data-design-palette="balanced"][data-design-accent="violet"] {
+  --design-accent-swatch: #995fc3;
+  --design-accent: #b084d1;
+  --design-accent-hover: #b68ed5;
+  --design-on-accent: #111215;
+  --design-accent-soft: #2d263a;
+  --design-focus: #b084d1;
+}
+[data-design-theme="neutral"][data-design-palette="balanced"][data-design-accent="violet"] {
+  --design-accent-swatch: #995fc3;
+  --design-accent: #714690;
+  --design-accent-hover: #684084;
+  --design-on-accent: #ffffff;
+  --design-accent-soft: #dad6e6;
+  --design-focus: #714690;
+}
+[data-design-palette="balanced"][data-design-accent="blue"] {
+  --design-accent-swatch: #5a82de;
+  --design-accent: #4a6bb6;
+  --design-accent-hover: #4462a7;
+  --design-on-accent: #ffffff;
+  --design-accent-soft: #ebf0fb;
+  --design-focus: #4a6bb6;
+}
+[data-design-theme="dark"][data-design-palette="balanced"][data-design-accent="blue"] {
+  --design-accent-swatch: #5a82de;
+  --design-accent: #7194e3;
+  --design-accent-hover: #7c9de5;
+  --design-on-accent: #111215;
+  --design-accent-soft: #232b3e;
+  --design-focus: #7194e3;
+}
+[data-design-theme="neutral"][data-design-palette="balanced"][data-design-accent="blue"] {
+  --design-accent-swatch: #5a82de;
+  --design-accent: #3c5795;
+  --design-accent-hover: #375089;
+  --design-on-accent: #ffffff;
+  --design-accent-soft: #d3dae9;
+  --design-focus: #3c5795;
+}
+[data-design-palette="balanced"][data-design-accent="green"] {
+  --design-accent-swatch: #09825d;
+  --design-accent: #087a57;
+  --design-accent-hover: #077050;
+  --design-on-accent: #ffffff;
+  --design-accent-soft: #e1f0ec;
+  --design-focus: #087a57;
+}
+[data-design-theme="dark"][data-design-palette="balanced"][data-design-accent="green"] {
+  --design-accent-swatch: #09825d;
+  --design-accent: #4ea58a;
+  --design-accent-hover: #5cac93;
+  --design-on-accent: #111215;
+  --design-accent-soft: #162b2a;
+  --design-focus: #4ea58a;
+}
+[data-design-theme="neutral"][data-design-palette="balanced"][data-design-accent="green"] {
+  --design-accent-swatch: #09825d;
+  --design-accent: #076549;
+  --design-accent-hover: #065d43;
+  --design-on-accent: #ffffff;
+  --design-accent-soft: #c9dada;
+  --design-focus: #076549;
+}
+[data-design-palette="balanced"][data-design-accent="graphite"] {
+  --design-accent-swatch: #1f1e1e;
+  --design-accent: #1f1e1e;
+  --design-accent-hover: #1d1c1c;
+  --design-on-accent: #ffffff;
+  --design-accent-soft: #e4e4e4;
+  --design-focus: #1f1e1e;
+}
+[data-design-theme="dark"][data-design-palette="balanced"][data-design-accent="graphite"] {
+  --design-accent-swatch: #1f1e1e;
+  --design-accent: #989898;
+  --design-accent-hover: #a0a0a0;
+  --design-on-accent: #111215;
+  --design-accent-soft: #1a1b20;
+  --design-focus: #989898;
+}
+[data-design-theme="neutral"][data-design-palette="balanced"][data-design-accent="graphite"] {
+  --design-accent-swatch: #1f1e1e;
+  --design-accent: #1f1e1e;
+  --design-accent-hover: #1d1c1c;
+  --design-on-accent: #ffffff;
+  --design-accent-soft: #cbced2;
+  --design-focus: #1f1e1e;
+}
