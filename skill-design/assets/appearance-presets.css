@@ -290,3 +290,30 @@
   --design-accent-soft: #cbced2;
   --design-focus: #1f1e1e;
 }
+
+/* Additional styles. Color and font choices remain independent. */
+[data-design-style="focused"] {
+  --design-radius-control: 10px;
+  --design-radius-card: 15px;
+  --design-radius-dialog: 24px;
+  --design-radius-menu: 13px;
+  --design-radius-item: 8px;
+}
+[data-design-style="compact"] {
+  --design-radius-control: 8px;
+  --design-radius-card: 8px;
+  --design-radius-dialog: 12px;
+  --design-radius-menu: 12px;
+  --design-radius-item: 6px;
+}
+[data-design-theme="dark"]:is([data-design-style="focused"], [data-design-style="compact"]) {
+  --design-canvas: #1d1d1d;
+  --design-surface: #242323;
+  --design-surface-muted: #272727;
+  --design-surface-raised: #2b2a2a;
+  --design-surface-overlay: #2b2b2b;
+  --design-text: #f3f4f7;
+  --design-text-muted: #b6bfce;
+  --design-border: #414141;
+  --design-control-border: #8695a9;
+}

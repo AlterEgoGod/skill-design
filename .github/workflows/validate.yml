@@ -1,0 +1,53 @@
+name: Validate Skill Design
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.11', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -B -m unittest discover -s skill-design/tests -v
+      - run: python skill-design/scripts/install_skill.py --agent codex --scope project --project /tmp/skill-install-check --instructions
+      - run: python skill-design/scripts/create_next_example.py /tmp/skill-next-example
+  next-example:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python skill-design/scripts/create_next_example.py /tmp/skill-next-example
+      - run: npm install --no-audit --no-fund && npm run build && npm run typecheck
+        working-directory: /tmp/skill-next-example
+      - run: |
+          python -m pip install playwright==1.58.0
+          python -m playwright install --with-deps chromium
+          npm install --no-save axe-core@4.10.3 --no-audit --no-fund
+          npm run start > /tmp/skill-next.log 2>&1 &
+        working-directory: /tmp/skill-next-example
+      - run: |
+          python - <<'PY'
+          import time, urllib.request
+          for attempt in range(30):
+              try:
+                  urllib.request.urlopen('http://127.0.0.1:3000',timeout=2)
+                  break
+              except OSError:
+                  time.sleep(1)
+          else:
+              raise SystemExit('Next.js did not start')
+          PY
+          python skill-design/scripts/audit_ui.py --url http://127.0.0.1:3000 --output /tmp/ui-audit --axe /tmp/skill-next-example/node_modules/axe-core/axe.min.js --strict

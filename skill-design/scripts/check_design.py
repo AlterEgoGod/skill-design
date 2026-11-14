@@ -20,14 +20,19 @@ def main():
     contrast=commands.add_parser('contrast')
     contrast.add_argument('--foreground',type=color,required=True)
     contrast.add_argument('--background',type=color,required=True)
+    contrast.add_argument('--require',choices=['normal-text','large-text','non-text'],help='Strict threshold: exit 1 on failure, 0 on pass; without this flag only report.')
     font=commands.add_parser('font')
     font.add_argument('path')
     args=parser.parse_args()
     if args.command=='contrast':
         a,b=sorted([luminance(args.foreground),luminance(args.background)])
         ratio=(b+.05)/(a+.05)
-        print(json.dumps({'ratio':ratio,'normal_text_AA':ratio>=4.5,'large_text_AA':ratio>=3,'non_text_threshold':ratio>=3}))
-        return 0
+        result={'ratio':ratio,'normal_text_AA':ratio>=4.5,'large_text_AA':ratio>=3,'non_text_threshold':ratio>=3}
+        if args.require:
+            threshold=4.5 if args.require=='normal-text' else 3
+            result.update(required=args.require,threshold=threshold,passed=ratio>=threshold)
+        print(json.dumps(result))
+        return 1 if args.require and not result['passed'] else 0
     try:
         from fontTools.ttLib import TTFont
     except ImportError:
